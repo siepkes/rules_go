@@ -40,6 +40,7 @@ SDK_REPOSITORIES = {
         "linux_armv6l":      ("go1.10.2.linux-armv6l.tar.gz", "529a16b531d4561572db6ba9d357215b58a1953437a63e76dc0c597be9e25dd2"),
         "linux_ppc64le":     ("go1.10.2.linux-ppc64le.tar.gz", "f0748502c90e9784b6368937f1d157913d18acdae72ac75add50e5c0c9efc85c"),
         "linux_s390x":       ("go1.10.2.linux-s390x.tar.gz", "2266b7ebdbca13c21a1f6039c9f6887cd2c01617d1e2716ff4595307a0da1d46"),
+        "solaris_amd64":     ("go1.10.2.solaris-amd64.tar.gz", "f9eab48460e1a12bc9095d64976f9dab434ae6b70ec54cc23df8f165b6e1660b"),
         "windows_386":       ("go1.10.2.windows-386.zip", "0bb12875044674d632d1f1b2f53cf33510a6df914178fe672f3f70f6f6cdf80d"),
         "windows_amd64":     ("go1.10.2.windows-amd64.zip", "0fb4a893796e8151c0b8d0a3da4ed8cbb22bf6d98a3c29c915be4d7083f146ee"),
     },
