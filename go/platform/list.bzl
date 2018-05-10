@@ -22,7 +22,7 @@ GOOS = {
     "netbsd": None,
     "openbsd": None,
     "plan9": None,
-    "solaris": None,
+    "solaris": "@bazel_tools//platforms:solaris",
     "windows": "@bazel_tools//platforms:windows",
 }
 

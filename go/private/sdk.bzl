@@ -38,6 +38,8 @@ def _go_download_sdk_impl(ctx):
     # Default to amd64 when uname doesn't return a known value.
   elif ctx.os.name == 'mac os x':
     host = "darwin_amd64"
+  elif ctx.os.name == 'sunos':
+    host = "solaris_amd64"
   elif ctx.os.name.startswith('windows'):
     host = "windows_amd64"
   else:
@@ -53,7 +55,8 @@ go_download_sdk = repository_rule(
     _go_download_sdk_impl,
     attrs = {
         "sdks": attr.string_list_dict(),
-        "urls": attr.string_list(default = ["https://storage.googleapis.com/golang/{}"]),
+        # Changed to internal because the Solaris golang distro is not hosted by Google.
+        "urls": attr.string_list(default = ["http://misc.serviceplanet.nl/golang/{}"]),
         "strip_prefix": attr.string(default = "go"),
     },
 )
