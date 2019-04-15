@@ -56,7 +56,8 @@ _go_download_sdk = repository_rule(
         "goos": attr.string(),
         "goarch": attr.string(),
         "sdks": attr.string_list_dict(),
-        "urls": attr.string_list(default = ["https://dl.google.com/go/{}"]),
+        # Changed to internal because the Solaris golang distro is not hosted by Google.
+        "urls": attr.string_list(default = ["http://misc.serviceplanet.nl/golang/{}"]),
         "strip_prefix": attr.string(default = "go"),
     },
 )
@@ -181,6 +182,8 @@ def _detect_host_platform(ctx):
 
     elif ctx.os.name == "mac os x":
         host = "darwin_amd64"
+    elif ctx.os.name == 'sunos':
+        host = "solaris_amd64"
     elif ctx.os.name.startswith("windows"):
         host = "windows_amd64"
     elif ctx.os.name == "freebsd":
