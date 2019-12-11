@@ -22,6 +22,7 @@ BAZEL_GOOS_CONSTRAINTS = {
     "freebsd": "@bazel_tools//platforms:freebsd",
     "linux": "@bazel_tools//platforms:linux",
     "windows": "@bazel_tools//platforms:windows",
+    "solaris": "@bazel_tools//platforms:solaris",
 }
 
 BAZEL_GOARCH_CONSTRAINTS = {
