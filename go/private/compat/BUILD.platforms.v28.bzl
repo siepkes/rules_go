@@ -5,6 +5,7 @@
 ) for name in (
     "android",
     "freebsd",
+    "illumos",
     "ios",
     "linux",
     "os",

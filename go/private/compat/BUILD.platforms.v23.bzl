@@ -6,6 +6,7 @@
     # OS constraint_values
     "android",
     "freebsd",
+    "illumos",
     "ios",
     "linux",
     "osx",

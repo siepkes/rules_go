@@ -20,6 +20,8 @@ BAZEL_GOOS_CONSTRAINTS = {
     "android": "@io_bazel_rules_go_compat//platforms:android",
     "darwin": "@io_bazel_rules_go_compat//platforms:osx",
     "freebsd": "@io_bazel_rules_go_compat//platforms:freebsd",
+    # TODO: Differentiate between Solaris and Illumos. Needs Golang Illumos identifier?
+    "solaris": "@io_bazel_rules_go_compat//platforms:illumos",
     "linux": "@io_bazel_rules_go_compat//platforms:linux",
     "windows": "@io_bazel_rules_go_compat//platforms:windows",
 }
@@ -46,6 +48,7 @@ GOOS_GOARCH = (
     ("freebsd", "386"),
     ("freebsd", "amd64"),
     ("freebsd", "arm"),
+    ("illumos", "amd64"),
     ("linux", "386"),
     ("linux", "amd64"),
     ("linux", "arm"),
@@ -78,6 +81,7 @@ GOOS_GOARCH = (
 RACE_GOOS_GOARCH = {
     ("darwin", "amd64"): None,
     ("freebsd", "amd64"): None,
+    ("illumos", "amd64"): None,
     ("linux", "amd64"): None,
     ("windows", "amd64"): None,
 }
