@@ -143,6 +143,7 @@ _LINK_C_ARCHIVE_PLATFORMS = {
 _LINK_C_ARCHIVE_GOOS = {
     "dragonfly": None,
     "freebsd": None,
+    "illumos": None,
     "linux": None,
     "netbsd": None,
     "openbsd": None,
@@ -188,6 +189,7 @@ _LINK_PIE_PLATFORMS = {
     "android/arm64": None,
     "android/386": None,
     "freebsd/amd64": None,
+    "illumos/amd64": None,
 }
 
 def link_mode_args(mode):

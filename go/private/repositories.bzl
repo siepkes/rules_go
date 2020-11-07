@@ -45,13 +45,13 @@ def go_rules_dependencies(is_rules_go = False):
     _maybe(
         http_archive,
         name = "platforms",
-        strip_prefix = "platforms-9ded0f9c3144258dad27ad84628845bcd7ca6fe6",
-        # master, as of 2020-05-12
+        strip_prefix = "platforms-b0dd94293f860ece4cf445aa244da6e38436afd8",
+        # The original rules_go uses commit 9ded0f9c3144258dad27ad84628845bcd7ca6fe6 which is master, as of 2020-05-12.
+        # This is a forked platforms repo which has 'illumos' as 'os' defined.
         urls = [
-            "https://mirror.bazel.build/github.com/bazelbuild/platforms/archive/9ded0f9c3144258dad27ad84628845bcd7ca6fe6.zip",
-            "https://github.com/bazelbuild/platforms/archive/9ded0f9c3144258dad27ad84628845bcd7ca6fe6.zip",
+            "https://github.com/siepkes/platforms/archive/b0dd94293f860ece4cf445aa244da6e38436afd8.zip",
         ],
-        sha256 = "81394f5999413fcdfe918b254de3c3c0d606fbd436084b904e254b1603ab7616",
+        sha256 = "22137b94f2fed1d04491f3e8d84d9792154b1a934fdefec7bdbec998ae7c4a92",
     )
 
     # Needed by rules_go implementation and tests.
